@@ -19,7 +19,7 @@ module.exports = repoNotFoundHandler(asyncErrorHandler(async (req, res) => {
         return res.sendStatus(status.notFound);
     }
 
-    const diff = await callGit(execFile, ['log', '-p', '--pretty=%h', hash, '-1'], repoPath, true);
+    const diff = await callGit(execFile, ['log', '-p', '--pretty=format:', hash, '-1'], repoPath, true);
 
     return res.json({diff});
 }));

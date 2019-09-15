@@ -4,7 +4,7 @@
 1. npm install
 1. npm run server <directory>
  
-### Структура
+### Структура:
 - src
   - handlers - обработчики ошибок
   - utils - утилиты

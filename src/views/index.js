@@ -5,6 +5,7 @@ const tree = require('./tree');
 const file = require('./file');
 const create = require('./create');
 const remove = require('./remove');
+const count = require('./count');
 
 module.exports = {
     repos,
@@ -13,5 +14,6 @@ module.exports = {
     tree,
     file,
     create,
-    remove
+    remove,
+    count,
 };
