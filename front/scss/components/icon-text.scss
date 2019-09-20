@@ -1,0 +1,36 @@
+@import "../common/index";
+
+$local-icon-size-s: 12px;
+$local-icon-size-m: 20px;
+
+.icon-text {
+  font-size: 0;
+
+  &__icon {
+    display: inline-block;
+    vertical-align: middle;
+
+    height: 20px;
+
+    background: 50% 50% no-repeat;
+    background-size: contain;
+
+    // Сделать в цикле?
+    &_size {
+      &_s {
+        width: $local-icon-size-s;
+      }
+      &_m {
+        width: $local-icon-size-m;
+      }
+    }
+  }
+
+  &__text {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: $global-spacing-xs;
+
+    color: $black-100;
+  }
+}

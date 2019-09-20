@@ -1,0 +1,18 @@
+@import '../common/index';
+
+.days {
+  &__item {
+    padding-bottom: $global-spacing-m;
+
+    &:last-child {
+      padding-bottom: 0;
+    }
+  }
+
+  &__title {
+    color: $gray-90;
+    font-size: $global-font-size-s;
+    line-height: $global-line-height-m;
+    padding-bottom: $global-spacing-m;
+  }
+}

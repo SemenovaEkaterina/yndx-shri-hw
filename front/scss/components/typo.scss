@@ -1,0 +1,10 @@
+@import '../common/index';
+
+.typo {
+  &_type {
+    &_base {
+      font-size: $global-font-size-s;
+      line-height: $global-line-height-m;
+    }
+  }
+}

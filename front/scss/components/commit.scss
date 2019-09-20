@@ -1,0 +1,18 @@
+@import "../common/index";
+
+.commit {
+  user-select: none;
+
+  &__name {
+    font-size: $global-font-size-xl;
+    line-height: $global-line-height-l;
+
+    padding-bottom: $global-spacing-xxs; // Отличается на 1px
+  }
+
+  &__description {
+    color: #434445;
+    font-size: $global-font-size-m;
+    line-height: $global-line-height-m;
+  }
+}

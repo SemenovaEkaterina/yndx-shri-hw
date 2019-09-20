@@ -1,0 +1,45 @@
+@import "../common/index";
+
+.tabs {
+  width: 100%;
+  position: relative;
+
+  &:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: $global-border-width-s;
+    background: $gray-40;
+  }
+
+  &__item {
+    display: inline-block;
+    position: relative;
+    margin-right: $global-spacing-xl;
+    padding-bottom: $global-spacing-s; // в макете отличается на 1px
+
+    color: $gray-90;
+    font-size: $global-font-size-m;
+    line-height: $global-line-height-m;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    &:last-child {
+      padding-right: 0;
+    }
+
+    &_active {
+      color: $black-100;
+
+      &:before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: $global-border-width-l;
+        background: $red-100;
+      }
+    }
+  }
+}

@@ -1,0 +1,101 @@
+@import "../common/index";
+
+.file-container {
+  font-size: 0;
+
+  border: $global-border-width-s solid $gray-10;
+  border-radius: $global-border-radius-s;
+
+  overflow-x: auto;
+
+  &__header {
+    display: table;
+    width: 100%;
+    box-sizing: border-box;
+
+    padding: 11px 12px;
+    background: $gray-30;
+  }
+
+  &__info {
+    display: table-cell;
+    vertical-align: middle;
+  }
+
+  &__status {
+    display: inline-block;
+    vertical-align: middle;
+
+    color: $purple-100;
+    font-size: $global-font-size-s;
+    line-height: $global-line-height-m;
+
+    padding-right: $global-spacing-s;
+  }
+
+  &__icon {
+    display: inline-block;
+    vertical-align: middle;
+    width: 12px;
+    height: 16px;
+
+    background: url("/static/imgs/file.svg") 50% 50% no-repeat;
+    background-size: contain;
+
+    // Геометрически находится выше середины
+    margin-bottom: 3px;
+
+    margin-right: $global-spacing-xs;
+    &:first-child {
+      margin-left: 4px;
+    }
+  }
+
+  &__name {
+    display: inline-block;
+    vertical-align: middle;
+
+    color: $black-100;
+    font-size: $global-font-size-s;
+    line-height: $global-line-height-m;
+
+    max-width: 90%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &__actions {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: right;
+
+    white-space: nowrap;
+  }
+
+  &__count {
+    display: inline-block;
+    font-size: $global-font-size-s;
+    line-height: $global-line-height-m;
+
+    padding-left: $global-spacing-m;
+    &:first-child {
+      padding-left: 0;
+    }
+
+    &_type {
+      &_positive {
+        color: $green-60;
+
+        &:before {
+          content: "+"
+        }
+      }
+      &_negative {
+        color: $red-100;
+        &:before {
+          content: "-"
+        }
+      }
+    }
+  }
+}

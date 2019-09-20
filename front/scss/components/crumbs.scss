@@ -1,0 +1,35 @@
+@import "../common/index";
+
+$local-spacing: $global-spacing-s;
+
+.crumbs {
+  padding-top: $global-spacing-xs;
+  padding-bottom: 10px;
+
+  border-bottom: $global-border-width-s solid $gray-40;
+
+  &__item {
+    display: inline-block;
+
+    color: $gray-90;
+    font-size: $global-font-size-s;
+    line-height: $global-line-height-m;
+
+    margin-right: $local-spacing;
+
+    &:after {
+      content: "/";
+      margin-left: $local-spacing;
+    }
+
+    &:last-child {
+      color: $black-100;
+
+      &:after {
+        padding-right: 0;
+
+        content: none;
+      }
+    }
+  }
+}

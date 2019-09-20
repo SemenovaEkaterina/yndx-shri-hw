@@ -1,0 +1,33 @@
+<div class="files-page__files">
+    <div class="table">
+        <div class="table__row table__row_type_header">
+            <div class="table__col typo typo_type_base">Name</div>
+            <div class="table__col typo typo_type_base">Last commit</div>
+            <div class="table__col typo typo_type_base">Commit message</div>
+            <div class="table__col typo typo_type_base">Commiter</div>
+            <div class="table__col typo typo_type_base">Updated</div>
+        </div>
+        <div class="table__row table__row_type_content">
+            <div class="table__col typo typo_type_base">
+                <a href="/files">
+                    <%- include('../../components/directory.ejs', { name: "api" }) %>
+                </a>
+            </div>
+            <div class="table__col typo typo_type_base"><a class="link" href="/commit">d53dsv</a></div>
+            <div class="table__col typo typo_type_base">[vcs] move http to arc</div>
+            <div class="table__col typo typo_type_base"><div class="name">somov</div></div>
+            <div class="table__col typo typo_type_base">4s ago</div>
+        </div>
+        <div class="table__row table__row_type_content">
+            <div class="table__col typo typo_type_base">
+                <a href="/details">
+                    <%- include('../../components/file.ejs', { name: "ya.make" }) %>
+                </a>
+            </div>
+            <div class="table__col typo typo_type_base"><a class="link" href="/commit">d53dsv</a></div>
+            <div class="table__col typo typo_type_base">[vcs] move http to arc</div>
+            <div class="table__col typo typo_type_base"><div class="name">somov</div></div>
+            <div class="table__col typo typo_type_base">4s ago</div>
+        </div>
+    </div>
+</div>

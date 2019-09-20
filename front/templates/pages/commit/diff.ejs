@@ -1,0 +1,42 @@
+<div class="file-container">
+    <div class="file-container__header">
+        <div class="file-container__info">
+            <div class="file-container__status">M</div>
+            <div class="file-container__icon"></div>
+            <div class="file-container__name">
+                /trunk/arcadia/devtools/intellij/src/main/java/ru/yandex/devtools/intellij/arc/client/ArcCli.java
+            </div>
+        </div>
+        <div class="file-container__actions">
+            <div class="file-container__count file-container__count_type_positive">100</div>
+            <div class="file-container__count file-container__count_type_negative">30</div>
+        </div>
+    </div>
+    <div class="code code_diff">
+        <%- include('./meta.ejs') -%>
+        <div class="code__rows">
+            <% [
+                {number: 1, prevNumber: 1, text: 'package ru.yandex.devtools.intellij.arc.client;', type: 'old'},
+                {number: 2, prevNumber: 2, text: '', type: 'old'},
+                {number: 3, prevNumber: '', text: 'import java.util.ArrayList;', type: 'new'},
+                {number: 4, prevNumber: '', text: 'import java.util.Collection;', type: 'new'},
+                {number: 5, prevNumber: '', text: 'import java.util.List;', type: 'new'},
+                {number: 6, prevNumber: '', text: '', type: 'new'},
+                {number: 7, prevNumber: 3, text: 'import com.intellij.openapi.diagnostic.Logger;', type: 'old'},
+                {number: 8, prevNumber: '', text: 'import com.intellij.openapi.project.Project;', type: 'new'},
+                {number: 9, prevNumber: 4, text: 'import com.intellij.openapi.vcs.FilePath;', type: 'old'},
+                {number: 10, prevNumber: 5, text: 'import com.intellij.openapi.vcs.VcsException;', type: 'old'},
+                {number: 11, prevNumber: 6, text: 'import com.intellij.openapi.vfs.VirtualFile;', type: 'old'},
+                {number: 12, prevNumber: 7, text: 'import com.intellij.vcsUtil.VcsUtil;', type: 'old'},
+                {number: 13, prevNumber: '', text: 'import org.jetbrains.annotations.NotNull;', type: 'new'},
+                {number: 14, prevNumber: 8, text: '', type: 'old'},
+                {number: '', prevNumber: 9, text: 'import java.util.ArrayList;', type: 'deleted'},
+                {number: '', prevNumber: 10, text: 'import java.util.Collection;', type: 'deleted'},
+                {number: '', prevNumber: 11, text: 'import java.util.List;', type: 'deleted'},
+            ].forEach(function(line, i){ %>
+                <%- include('../../components/code-line.ejs', { diff: true, number: line.number, prevNumber: line.prevNumber, text: line.text, type: line.type, language: "java" }) %>
+            <% }); %>
+        </div>
+        <%- include('./meta.ejs') -%>
+    </div>
+</div>

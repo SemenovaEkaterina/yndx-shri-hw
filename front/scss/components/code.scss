@@ -1,0 +1,58 @@
+@import '../common/index';
+
+.code {
+  color: $gray-80;
+  font-size: $global-font-size-xxs;
+  line-height: $global-line-height-m;
+
+  &:not(#{&}_diff) {
+    padding: 6px 0;
+  }
+
+  & * {
+    font-family: 'PT Mono', monospace;
+  }
+
+  &__rows {
+    display: table;
+    width: 100%;
+  }
+
+  &__line {
+    display: table-row;
+
+    &_type {
+      &_old {
+        background-color: transparent;
+      }
+      &_new {
+        background-color: $green-10;
+      }
+      &_deleted {
+        background-color: $red-10;
+      }
+    }
+  }
+
+  &__number {
+    display: table-cell;
+    padding: 0 $global-spacing-xl 0 24px;
+
+    width: 1px;
+
+    font-family: 'PT Mono', monospace;
+    text-align: right;
+  }
+
+  &__text {
+    display: table-cell;
+    // Чтобы текст не уперся в край таблицы
+    padding-right: $global-spacing-xxs;
+  }
+
+  &__meta {
+    background-color: $blue-30;
+
+    padding: $global-spacing-xxs $global-spacing-s;
+  }
+}

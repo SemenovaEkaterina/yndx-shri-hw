@@ -1,0 +1,35 @@
+<div class="details-page__file">
+    <div class="file-container">
+        <div class="file-container__header">
+            <div class="file-container__info">
+                <div class="file-container__icon"></div>
+                <div class="file-container__name">ya.make (4 347 bytes)</div>
+            </div>
+            <div class="file-container__actions">
+            </div>
+        </div>
+        <div class="code">
+            <% [
+                '#!/usr/bin/env python',
+                'import os',
+                'import sys',
+                'import platform',
+                '',
+                'URLS = ["https://test.com"]',
+                'def create_dirs(path)',
+                '   try:',
+                '       os.makedirs(path)',
+                '   except OSError as e:',
+                '       import errno',
+                '',
+                '       if e.errno != errno.EEXIST:',
+                '           raise',
+                '',
+                '   return path'
+
+            ].forEach(function(line, i){ %>
+                <%- include('../../components/code-line.ejs', { diff: false, number: i + 1, text: line, type: "old", language: "python" }) %>
+            <% }); %>
+        </div>
+    </div>
+</div>

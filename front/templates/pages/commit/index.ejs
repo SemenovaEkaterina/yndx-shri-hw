@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link rel="stylesheet" href="/static/style.css">
+    <title>3.1: Страница коммита</title>
+</head>
+<body class="body">
+<%- include('../../components/header.ejs') %>
+<div class="commit-page page">
+    <div class="commit-page__header commit">
+        <div class="commit__name">
+            DEVTOOLS-4599: Add option to add extra whitespace between projects
+        </div>
+        <div class="commit__description">
+            <span class="link">s324e8</span> by <span class="name">woodcutter</span>, 4 s ago
+        </div>
+    </div>
+    <div class="commit-page__diff">
+        <%- include('./diff.ejs') %>
+    </div>
+</div>
+<%- include('../../components/footer.ejs') %>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/highlight.min.js"></script>
+<script src="/static/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,7 @@
+<div class="code__line code__line_type_<%= type %>">
+    <% if (diff) { %>
+        <div class="code__number"><%= prevNumber %></div>
+    <% } %>
+    <div class="code__number"><%= number %></div>
+    <pre class="code__text <%= language %>"><%= text %></pre>
+</div>

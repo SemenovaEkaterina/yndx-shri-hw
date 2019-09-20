@@ -1,0 +1,37 @@
+@import "../common/index";
+
+.footer {
+  display: table;
+
+  //position: absolute;
+  //bottom: 0;
+
+  @include media("<=phone") {
+    display: none;
+  }
+
+  &__item {
+    display: table-cell;
+
+    color: $gray-90;
+    font-size: $global-font-size-xs;
+    line-height: $global-line-height-s;
+    padding: 18px $global-spacing-l 14px;
+
+    white-space: nowrap;
+
+    &_type {
+      &_info {
+        width: 100%;
+      }
+
+      &_version {
+        padding-right: $global-spacing-xl;
+      }
+
+      &_year {
+        padding-left: 0;
+      }
+    }
+  }
+}

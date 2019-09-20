@@ -1,0 +1,9 @@
+<div class="tabs">
+    <% tabs.forEach(function(tab){ %>
+        <a
+                class="tabs__item <% if (tab.isActive) { %>tabs__item_active<% } %>"
+                href="/<%= tab.title %>">
+            <%= tab.title %>
+        </a>
+    <% }); %>
+</div>

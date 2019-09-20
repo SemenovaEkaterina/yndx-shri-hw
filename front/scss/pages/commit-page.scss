@@ -1,0 +1,11 @@
+@import "../common/index";
+
+.commit-page {
+  &__header {
+    padding-top: $global-spacing-m;
+  }
+
+  &__diff {
+    padding-top: $global-font-size-xl;
+  }
+}

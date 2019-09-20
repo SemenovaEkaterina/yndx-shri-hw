@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" href="/static/style.css">
+    <title>1.6: Просмотр истории изменений файла</title>
+</head>
+<body class="body">
+<%- include('../../components/header.ejs') %>
+<div class="page history-page">
+    <%- include('../../components/repo.ejs', { tabs: [{title: 'details', isActive: false}, {title: 'history', isActive: true}] }) %>
+    <%- include('./list.ejs') %>
+</div>
+<%- include('../../components/footer.ejs') %>
+<script src="/static/script.js"></script>
+</body>
+</html>

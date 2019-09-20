@@ -1,0 +1,46 @@
+@import '../common/index';
+
+$local-image-wrapper-size: 40px;
+$local-image-size: 16px;
+
+.history {
+  &__item {
+    position: relative;
+
+    width: 100%;
+    padding-left: $local-image-wrapper-size + $global-spacing-s;
+    box-sizing: border-box;
+
+    padding-bottom: 14px;
+
+    &:last-child {
+      padding-bottom: 0;
+    }
+  }
+
+  &__img {
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    width: $local-image-wrapper-size;
+    height: $local-image-wrapper-size;
+
+    background: url('/static/imgs/change.svg') 50% 50% no-repeat, $blue-20;
+    background-size: $local-image-size;
+
+    border-radius: 50%;
+  }
+
+  &__item:not(:last-child) &__line {
+    position: absolute;
+    left: $local-image-wrapper-size / 2;
+    bottom: $global-spacing-xxxs;
+    top: $local-image-wrapper-size + $global-spacing-xxxs;
+    transform: translate(-50%, 0);
+    width: 2px;
+
+    background: $gray-70;
+    border-radius: $global-border-radius-xs;
+  }
+}
