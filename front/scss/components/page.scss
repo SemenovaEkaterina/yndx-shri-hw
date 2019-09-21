@@ -1,7 +1,0 @@
-.page {
-  padding: 0 $global-spacing-xl;
-
-  @include media("<=phone") {
-    padding: 0;
-  }
-}

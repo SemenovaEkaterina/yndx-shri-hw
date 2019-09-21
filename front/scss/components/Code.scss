@@ -1,24 +1,23 @@
 @import '../common/index';
 
-.code {
+.Code {
   color: $gray-80;
   font-size: $global-font-size-xxs;
   line-height: $global-line-height-m;
+
+  width: 100%;
+  overflow-x: auto;
 
   &:not(#{&}_diff) {
     padding: 6px 0;
   }
 
-  & * {
-    font-family: 'PT Mono', monospace;
-  }
-
-  &__rows {
+  &-rows {
     display: table;
     width: 100%;
   }
 
-  &__line {
+  &-line {
     display: table-row;
 
     &_type {
@@ -34,23 +33,26 @@
     }
   }
 
-  &__number {
+  &-number {
     display: table-cell;
     padding: 0 $global-spacing-xl 0 24px;
 
     width: 1px;
 
-    font-family: 'PT Mono', monospace;
     text-align: right;
+
+    @include media("<=phone") {
+      padding: 0 $global-spacing-s 0 $global-spacing-m;
+    }
   }
 
-  &__text {
+  &-text {
     display: table-cell;
     // Чтобы текст не уперся в край таблицы
     padding-right: $global-spacing-xxs;
   }
 
-  &__meta {
+  &-meta {
     background-color: $blue-30;
 
     padding: $global-spacing-xxs $global-spacing-s;

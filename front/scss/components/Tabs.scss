@@ -1,6 +1,6 @@
 @import "../common/index";
 
-.tabs {
+.Tabs {
   width: 100%;
   position: relative;
 
@@ -13,13 +13,12 @@
     background: $gray-40;
   }
 
-  &__item {
+  &-item {
     display: inline-block;
     position: relative;
     margin-right: $global-spacing-xl;
-    padding-bottom: $global-spacing-s; // в макете отличается на 1px
+    padding-bottom: $global-spacing-s;
 
-    color: $gray-90;
     font-size: $global-font-size-m;
     line-height: $global-line-height-m;
     text-transform: uppercase;
@@ -29,9 +28,11 @@
       padding-right: 0;
     }
 
-    &_active {
-      color: $black-100;
+    @include media("<=phone") {
+      padding-bottom: 10px;
+    }
 
+    &_active {
       &:before {
         content: "";
         position: absolute;

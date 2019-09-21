@@ -4,10 +4,10 @@ $local-arrow-size: 12px;
 // Увеличение области клика
 $local-arrow-offset: $global-spacing-xs * 2;
 
-.dropdown {
+.Dropdown {
   position: relative;
 
-  &__arrow {
+  &-arrow {
     position: absolute;
     top: 50%;
     left: 100%;
@@ -21,11 +21,11 @@ $local-arrow-offset: $global-spacing-xs * 2;
     cursor: pointer;
   }
 
-  &_opened &__arrow {
+  &_opened &-arrow {
     transform: scale(1, -1) translate(0, 50%);
   }
 
-  &__options {
+  &-options {
     display: none;
     overflow: hidden;
     z-index: 1;
@@ -41,19 +41,18 @@ $local-arrow-offset: $global-spacing-xs * 2;
     background: white;
   }
 
-  &_opened &__options {
+  &_opened &-options {
     display: block;
   }
 
-  &__list {
+  &-list {
     max-height: 293px;
     overflow: auto;
   }
 
   $local-horizontal-padding: $global-spacing-s;
 
-  &__item {
-    padding: $global-spacing-xs $local-horizontal-padding;
+  &-item {
 
     &:not(#{&}_selected) {
       cursor: pointer;
@@ -66,13 +65,13 @@ $local-arrow-offset: $global-spacing-xs * 2;
     }
   }
 
-  &__separator {
+  &-separator {
     margin: 0 $local-horizontal-padding 6px;
     height: $global-border-width-s;
     background: $gray-40;
   }
 
-  &__transition {
+  &-transition {
     position: absolute;
     bottom: 0;
     width: 100%;

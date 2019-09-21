@@ -2,14 +2,17 @@
 <html lang="ru">
 <head>
     <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <link rel="stylesheet" href="/static/style.css">
     <title>1.1, 1.2, 1.3, 1.4</title>
 </head>
-<body class="body">
+<body class="Body Typo Typo_style_default Typo_color_default Typo_size_default">
 <%- include('../../components/header.ejs') %>
-<div class="page files-page">
+<div class="Container">
     <%- include('../../components/repo.ejs', { tabs: [{title: 'files', isActive: true}, {title: 'branches', isActive: false}] }) %>
     <%- include('./files-list.ejs') %>
+</div>
+<div class="Container Container_full">
     <%- include('./readme.ejs') %>
 </div>
 <%- include('../../components/footer.ejs') %>

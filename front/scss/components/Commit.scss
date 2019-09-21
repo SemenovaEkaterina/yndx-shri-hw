@@ -1,17 +1,17 @@
 @import "../common/index";
 
-.commit {
+.Commit {
   user-select: none;
 
-  &__name {
+  &-name {
     font-size: $global-font-size-xl;
     line-height: $global-line-height-l;
 
     padding-bottom: $global-spacing-xxs; // Отличается на 1px
   }
 
-  &__description {
-    color: #434445;
+  &-description {
+    color: $black-30;
     font-size: $global-font-size-m;
     line-height: $global-line-height-m;
   }

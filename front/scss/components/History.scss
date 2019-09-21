@@ -3,8 +3,8 @@
 $local-image-wrapper-size: 40px;
 $local-image-size: 16px;
 
-.history {
-  &__item {
+.History {
+  &-item {
     position: relative;
 
     width: 100%;
@@ -18,7 +18,7 @@ $local-image-size: 16px;
     }
   }
 
-  &__img {
+  &-img {
     position: absolute;
     left: 0;
     top: 0;
@@ -32,7 +32,7 @@ $local-image-size: 16px;
     border-radius: 50%;
   }
 
-  &__item:not(:last-child) &__line {
+  &-item:not(:last-child) &-line {
     position: absolute;
     left: $local-image-wrapper-size / 2;
     bottom: $global-spacing-xxxs;

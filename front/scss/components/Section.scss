@@ -1,0 +1,33 @@
+@import "../common/index";
+
+.Section {
+  &_size {
+    &_s {
+      padding-top: $global-spacing-s;
+    }
+    &_m {
+      padding-top: $global-spacing-m;
+    }
+    &_l {
+      padding-top: 18px;
+    }
+    &_xl {
+      padding-top: 24px;
+    }
+  }
+
+  @include media("<=phone") {
+    &_mobile {
+      &_s {
+        padding: 0;
+      }
+      &_m {
+        padding: 10px 0;
+      }
+    }
+  }
+
+  &_bottom {
+    padding-bottom: $global-spacing-m;
+  }
+}

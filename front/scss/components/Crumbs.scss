@@ -2,18 +2,18 @@
 
 $local-spacing: $global-spacing-s;
 
-.crumbs {
+.Crumbs {
   padding-top: $global-spacing-xs;
   padding-bottom: 10px;
 
+  @include media("<=phone") {
+    padding-bottom: $global-spacing-xs;
+  }
+
   border-bottom: $global-border-width-s solid $gray-40;
 
-  &__item {
+  &-item {
     display: inline-block;
-
-    color: $gray-90;
-    font-size: $global-font-size-s;
-    line-height: $global-line-height-m;
 
     margin-right: $local-spacing;
 
@@ -22,9 +22,11 @@ $local-spacing: $global-spacing-s;
       margin-left: $local-spacing;
     }
 
-    &:last-child {
-      color: $black-100;
+    &:not(:last-child) {
+      color: $gray-90;
+    }
 
+    &:last-child {
       &:after {
         padding-right: 0;
 

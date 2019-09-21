@@ -1,0 +1,42 @@
+@import '../common/index';
+
+.Branch {
+  line-height: $global-line-height-m;
+  padding: $global-spacing-xs $global-spacing-s;
+
+  &:hover {
+    background-color: $gray-31;
+  }
+
+  &_inversed {
+    pointer-events: none;
+  }
+
+  &-name {
+    color: $black-30;
+    font-size: $global-font-size-s;
+
+    padding-bottom: $global-spacing-xxxs;
+  }
+
+  &_inversed &-name {
+    color: $gray-20;
+  }
+
+  &:hover &-name {
+    color: $black-100;
+  }
+
+  &-info {
+    color: $gray-90;
+    font-size: $global-font-size-xs;
+  }
+
+  &_inversed &-info {
+    color: $gray-20;
+  }
+
+  &:hover &-info {
+    color: $black-30;
+  }
+}

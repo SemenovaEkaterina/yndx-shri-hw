@@ -1,10 +1,13 @@
 @import '../common/index';
 
-.markdown {
-  padding: 24px 32px;
+.Markdown {
+  padding: 24px $global-spacing-xl;
 
-  &__title {
-    color: $black-100;
+  @include media("<=phone") {
+    padding: $global-spacing-m 24px;
+  }
+
+  &-title {
     font-weight: 500;
     font-size: $global-font-size-l;
     line-height: 24px;
@@ -12,7 +15,7 @@
     padding-bottom: 10px;
   }
 
-  &__text {
+  &-text {
     font-size: $global-font-size-s;
     line-height: $global-line-height-s;
   }

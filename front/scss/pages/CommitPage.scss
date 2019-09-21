@@ -1,11 +1,11 @@
 @import "../common/index";
 
-.commit-page {
-  &__header {
+.Commit-page {
+  &-header {
     padding-top: $global-spacing-m;
   }
 
-  &__diff {
+  &-diff {
     padding-top: $global-font-size-xl;
   }
 }

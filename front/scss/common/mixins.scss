@@ -1,11 +1,10 @@
-@import "variables";
+@import 'variables';
 
-@mixin container() {
+@mixin container {
   padding: 0 $global-spacing-xl;
-  //max-width: 1440px;
-  //margin: auto;
+  max-width: $global-container-width;
 
   @include media("<=phone") {
-    padding: 0;
+    padding: 0 $global-spacing-m;
   }
 }

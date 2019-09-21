@@ -1,8 +1,9 @@
 @import "../common/index";
 
-.header {
+.Header {
   width: 100%;
   position: relative;
+
   &:before {
     content: "";
     position: absolute;
@@ -12,12 +13,12 @@
     background: $gray-10;
   }
 
-  &__content {
-    @include container;
+  &-content {
     display: table;
+    @include container;
   }
 
-  &__item {
+  &-item {
     display: table-cell;
     vertical-align: middle;
     position: relative;
@@ -36,14 +37,23 @@
         height: 20px;
         padding-top: $global-spacing-m;
         padding-bottom: $global-spacing-l;
+
+        @include media("<=phone") {
+          padding-top: 19px;
+          padding-bottom: 21px;
+        }
       }
 
       &_text {
         padding-top: $global-spacing-l;
         padding-bottom: 18px;
 
-        font-size: 14px;
-        line-height: 18px;
+        font-size: $global-font-size-s;
+        line-height: $global-line-height-s;
+
+        @include media("<=phone") {
+          padding-top: 24px;
+        }
       }
     }
 

@@ -1,6 +1,6 @@
 @import "../common/index";
 
-.footer {
+.Footer {
   display: table;
 
   //position: absolute;
@@ -10,10 +10,9 @@
     display: none;
   }
 
-  &__item {
+  &-item {
     display: table-cell;
 
-    color: $gray-90;
     font-size: $global-font-size-xs;
     line-height: $global-line-height-s;
     padding: 18px $global-spacing-l 14px;

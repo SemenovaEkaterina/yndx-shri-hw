@@ -1,6 +1,6 @@
 @import "../common/index";
 
-.file-container {
+.FileContainer {
   font-size: 0;
 
   border: $global-border-width-s solid $gray-10;
@@ -8,32 +8,34 @@
 
   overflow-x: auto;
 
-  &__header {
+  &-header {
     display: table;
     width: 100%;
     box-sizing: border-box;
 
     padding: 11px 12px;
     background: $gray-30;
+
+    @include media("<=phone") {
+      padding-left: 16px;
+    }
   }
 
-  &__info {
+  &-info {
     display: table-cell;
     vertical-align: middle;
   }
 
-  &__status {
+  &-status {
     display: inline-block;
     vertical-align: middle;
 
     color: $purple-100;
-    font-size: $global-font-size-s;
-    line-height: $global-line-height-m;
 
     padding-right: $global-spacing-s;
   }
 
-  &__icon {
+  &-icon {
     display: inline-block;
     vertical-align: middle;
     width: 12px;
@@ -51,20 +53,20 @@
     }
   }
 
-  &__name {
+  &-name {
     display: inline-block;
     vertical-align: middle;
-
-    color: $black-100;
-    font-size: $global-font-size-s;
-    line-height: $global-line-height-m;
 
     max-width: 90%;
     overflow: hidden;
     text-overflow: ellipsis;
   }
 
-  &__actions {
+  &-size {
+    color: $gray-80;
+  }
+
+  &-actions {
     display: table-cell;
     vertical-align: middle;
     text-align: right;
@@ -72,10 +74,8 @@
     white-space: nowrap;
   }
 
-  &__count {
+  &-count {
     display: inline-block;
-    font-size: $global-font-size-s;
-    line-height: $global-line-height-m;
 
     padding-left: $global-spacing-m;
     &:first-child {

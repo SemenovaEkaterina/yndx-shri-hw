@@ -3,10 +3,10 @@
 $local-icon-size-s: 12px;
 $local-icon-size-m: 20px;
 
-.icon-text {
+.IconText {
   font-size: 0;
 
-  &__icon {
+  &-icon {
     display: inline-block;
     vertical-align: middle;
 
@@ -26,11 +26,9 @@ $local-icon-size-m: 20px;
     }
   }
 
-  &__text {
+  &-text {
     display: inline-block;
     vertical-align: middle;
     margin-left: $global-spacing-xs;
-
-    color: $black-100;
   }
 }

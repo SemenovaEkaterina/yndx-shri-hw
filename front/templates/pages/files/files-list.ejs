@@ -1,33 +1,48 @@
-<div class="files-page__files">
-    <div class="table">
-        <div class="table__row table__row_type_header">
-            <div class="table__col typo typo_type_base">Name</div>
-            <div class="table__col typo typo_type_base">Last commit</div>
-            <div class="table__col typo typo_type_base">Commit message</div>
-            <div class="table__col typo typo_type_base">Commiter</div>
-            <div class="table__col typo typo_type_base">Updated</div>
+<div class="Section Section_size_m Section_mobile_s">
+    <div class="Table">
+        <div class="Table-row Table-row_type_header">
+            <div class="Table-col">Name</div>
+            <div class="Table-col">Last commit</div>
+            <div class="Table-col">Commit message</div>
+            <div class="Table-col">Commiter</div>
+            <div class="Table-col">Updated</div>
         </div>
-        <div class="table__row table__row_type_content">
-            <div class="table__col typo typo_type_base">
-                <a href="/files">
-                    <%- include('../../components/directory.ejs', { name: "api" }) %>
-                </a>
+        <% [1, 2, 3, 4, 5, 6].forEach(function(){ %>
+            <div class="Table-row Table-row_type_content">
+                <div class="Table-col Typo Typo_size_default">
+                    <a href="/files">
+                        <%- include('../../components/directory.ejs', { name: "api" }) %>
+                    </a>
+                </div>
+                <div class="Table-col Table-col_desktop"><a class="Link Typo Typo_color_accent" href="/commit">d53dsv</a></div>
+                <div class="Table-col Table-col_desktop ">[vcs] move http to arc</div>
+                <div class="Table-col Table-col_mobile"><a class="Link Typo Typo_color_accent" href="">ARCADIA-771:</a> [vcs] move http to arc</div>
+                <div class="Table-col Table-col_mobile">
+                    <a class="Link Typo Typo_color_accent" href="/commit">d53dsv</a>
+                    by <span class="Name">somov</span>, 4s ago
+                </div>
+                <div class="Table-col Table-col_mobile Table-link"></div>
+                <div class="Table-col Table-col_desktop"><div class="Name">somov</div></div>
+                <div class="Table-col Table-col_desktop">4s ago</div>
             </div>
-            <div class="table__col typo typo_type_base"><a class="link" href="/commit">d53dsv</a></div>
-            <div class="table__col typo typo_type_base">[vcs] move http to arc</div>
-            <div class="table__col typo typo_type_base"><div class="name">somov</div></div>
-            <div class="table__col typo typo_type_base">4s ago</div>
-        </div>
-        <div class="table__row table__row_type_content">
-            <div class="table__col typo typo_type_base">
+        <% }); %>
+
+        <div class="Table-row Table-row_type_content">
+            <div class="Table-col Typo Typo_size_default">
                 <a href="/details">
                     <%- include('../../components/file.ejs', { name: "ya.make" }) %>
                 </a>
             </div>
-            <div class="table__col typo typo_type_base"><a class="link" href="/commit">d53dsv</a></div>
-            <div class="table__col typo typo_type_base">[vcs] move http to arc</div>
-            <div class="table__col typo typo_type_base"><div class="name">somov</div></div>
-            <div class="table__col typo typo_type_base">4s ago</div>
+            <div class="Table-col Table-col_desktop"><a class="Link Typo Typo_color_accent" href="/commit">d53dsv</a></div>
+            <div class="Table-col Table-col_desktop">[vcs] move http to arc</div>
+            <div class="Table-col Table-col_mobile"><a class="Link Typo Typo_color_accent" href="">ARCADIA-771:</a> [vcs] move http to arc</div>
+            <div class="Table-col Table-col_mobile">
+                <a class="Link Typo Typo_color_accent" href="/commit">d53dsv</a>
+                by <span class="Name">somov</span>, 4s ago
+            </div>
+            <div class="Table-col Table-col_mobile Table-link"></div>
+            <div class="Table-col Table-col_desktop"><div class="Name">somov</div></div>
+            <div class="Table-col Table-col_desktop">4s ago</div>
         </div>
     </div>
 </div>

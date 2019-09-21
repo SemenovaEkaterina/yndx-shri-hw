@@ -1,30 +1,30 @@
-<div class="path">
-    <div class="path__header">
-        <div class="path__name">ya.make</div>
-        <div class="path__branch dropdown">
+<div class="Path">
+    <div class="Path-header Typo Typo_size_title">
+        <div class="Path-name">ya.make</div>
+        <div class="Path-branch Dropdown Typo Typo_color_inactive">
             thunk
-            <div class="dropdown__arrow"></div>
-            <div class="dropdown__options">
-                <div class="dropdown__item dropdown__item_selected">
+            <div class="Dropdown-arrow"></div>
+            <div class="Dropdown-options">
+                <div class="Dropdown-item Dropdown-item_selected">
                     <%- include('../components/branchItem.ejs', { name: 'thunk', isInversed: true }) %>
                 </div>
-                <div class="dropdown__separator"></div>
-                <div class="dropdown__list">
-                    <div class="dropdown__item">
+                <div class="Dropdown-separator"></div>
+                <div class="Dropdown-list">
+                    <div class="Dropdown-item">
                         <%- include('../components/branchItem.ejs', { name: 'users/rudskoy/DEVTOOLS-37948', isInversed: false }) %>
                     </div>
                     <% [1, 2, 3, 4, 5, 6].forEach(function (value) {%>
-                        <div class="dropdown__item">
+                        <div class="Dropdown-item">
                             <%- include('../components/branchItem.ejs', { name: 'users/rudskoy/DEVTOOLS-43865', isInversed: false }) %>
                         </div>
                     <% }); %>
                 </div>
-                <div class="dropdown__transition"></div>
+                <div class="Dropdown-transition"></div>
             </div>
         </div>
     </div>
-    <div class="path__body">
-        Last commit <a class="link" href="/commit">c4d248</a> on 20 Oct 2017, 12:24 by <span
-                class="name">robot-srch-releaser</span>
+    <div class="Path-body">
+        Last commit <a class="Typo Typo_color_accent Link" href="/commit">c4d248</a> on 20 Oct 2017, 12:24 by <span
+                class="Name">robot-srch-releaser</span>
     </div>
 </div>
