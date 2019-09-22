@@ -1,5 +1,5 @@
 @import "../../../node_modules/include-media/dist/_include-media.scss";
-$breakpoints: (phone: 360px);
+$breakpoints: (phone: 360px, tablet: 700px);
 
 @import "variables";
 @import "colors";

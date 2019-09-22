@@ -1,4 +1,6 @@
+@import 'components/BackMenu';
 @import 'components/Body';
+@import 'components/Button';
 @import 'components/Branch';
 @import 'components/Code';
 @import 'components/Commit';
@@ -23,7 +25,7 @@
 @import 'components/Tabs';
 @import 'components/Typo';
 
-@import 'pages/CommitPage';
+@import 'components/Adaptive';
 
 html {
   height: 100%;

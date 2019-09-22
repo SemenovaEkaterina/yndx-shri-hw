@@ -39,6 +39,40 @@ $local-arrow-offset: $global-spacing-xs * 2;
     box-shadow: 0 4px 16px rgba(53, 73, 93, 0.2);
 
     background: white;
+
+    &_wide {
+      padding: 6px 0 10px;
+
+      @include media("<=tablet") {
+        padding: 36px 0 12px;
+      }
+    }
+
+    @include media("<=tablet") {
+      position: fixed;
+      top: 100%;
+      transform: translate(0px, -100%);
+      left: 0;
+      right: 0;
+
+      padding-top: 20px;
+
+      border-radius: $global-border-radius-m $global-border-radius-m 0 0;
+
+      &:before {
+        content: "";
+        position: absolute;
+        top: $global-spacing-xs;
+        left: 50%;
+        transform: translate(-50%, 0);
+
+        width: 42px;
+        height: 4px;
+        background: $gray-40;
+
+        border-radius: $global-border-radius-l;
+      }
+    }
   }
 
   &_opened &-options {
@@ -48,6 +82,10 @@ $local-arrow-offset: $global-spacing-xs * 2;
   &-list {
     max-height: 293px;
     overflow: auto;
+
+    @include media("<=tablet") {
+      max-height: 233px;
+    }
   }
 
   $local-horizontal-padding: $global-spacing-s;
@@ -78,5 +116,19 @@ $local-arrow-offset: $global-spacing-xs * 2;
 
     height: 17px;
     background: linear-gradient(180deg, rgba(255, 255, 255, 0.0001) 2.11%, #FFFFFF 99.54%);
+  }
+
+  &_opened &-bg {
+    @include media("<=tablet") {
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 1;
+
+      opacity: 0.5;
+      background-color: $black-100;
+    }
   }
 }

@@ -11,6 +11,7 @@
     &_type {
       &_text {
         width: auto;
+        padding-right: $global-spacing-m;
 
         @include media("<=phone") {
           display: block;
@@ -19,8 +20,9 @@
       &_commit {
         width: 5%;
         text-align: right;
+        white-space: nowrap;
 
-        @include media("<=phone") {
+        @include media("<=tablet") {
           display: none;
         }
       }

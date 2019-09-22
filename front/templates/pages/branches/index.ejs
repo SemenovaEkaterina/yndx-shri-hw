@@ -1,20 +1,8 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
-    <link rel="stylesheet" href="/static/style.css">
-    <title>2.1: Список веток</title>
-</head>
-<body class="Body Typo Typo_style_default Typo_color_default Typo_size_default">
-<%- include('../../components/header.ejs') %>
+<%- include('../../components/pageStart.ejs', {title: "2.1: Список веток"}) %>
 <div class="Container">
     <%- include('../../components/repo.ejs', { tabs: [{title: 'files', isActive: false}, {title: 'branches', isActive: true}] }) %>
     <div class="Section Section_bottom Section_size_s Section_mobile_s">
         <%- include('./list.ejs') %>
     </div>
 </div>
-<%- include('../../components/footer.ejs') %>
-<script src="/static/script.js"></script>
-</body>
-</html>
+<%- include('../../components/pageEnd.ejs') %>

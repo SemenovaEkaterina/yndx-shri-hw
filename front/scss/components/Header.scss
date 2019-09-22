@@ -14,8 +14,12 @@
   }
 
   &-content {
-    display: table;
     @include container;
+    width: 100%;
+  }
+
+  &-table {
+    display: table;
   }
 
   &-item {
@@ -23,12 +27,8 @@
     vertical-align: middle;
     position: relative;
 
-    padding: 0 $global-spacing-l;
     &:first-child {
-      padding-left: 0;
-    }
-    &:last-child {
-      padding-right: 0;
+      padding-right: $global-spacing-xxl;
     }
 
     &_type {
@@ -58,7 +58,6 @@
     }
 
     &_active {
-      overflow: hidden;
       &:before {
         content: "";
         position: absolute;
@@ -67,6 +66,23 @@
         bottom: 0;
         background: #FF4F49;
       }
+    }
+  }
+
+  &-dropdown {
+    position: relative;
+  }
+
+  &-option {
+    padding: $global-spacing-xs 22px;
+    transition: color ease-in 200ms;
+
+    &:hover {
+      color: $gray-90;
+    }
+
+    @include media("<=phone") {
+      padding: $global-spacing-s $global-spacing-m;
     }
   }
 }

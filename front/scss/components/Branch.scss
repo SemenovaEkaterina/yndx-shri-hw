@@ -3,6 +3,7 @@
 .Branch {
   line-height: $global-line-height-m;
   padding: $global-spacing-xs $global-spacing-s;
+  transition: background-color ease-in 200ms;
 
   &:hover {
     background-color: $gray-31;
@@ -17,6 +18,8 @@
     font-size: $global-font-size-s;
 
     padding-bottom: $global-spacing-xxxs;
+
+    transition: color ease-in 200ms;
   }
 
   &_inversed &-name {
@@ -30,6 +33,8 @@
   &-info {
     color: $gray-90;
     font-size: $global-font-size-xs;
+
+    transition: color ease-in 200ms;
   }
 
   &_inversed &-info {

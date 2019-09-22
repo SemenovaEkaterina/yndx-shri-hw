@@ -5,10 +5,12 @@ document.addEventListener('DOMContentLoaded', function () {
             e.target.parentNode.classList.toggle(openedClass);
         })
     });
-    document.querySelectorAll('.Dropdown-options').forEach(function (item) {
-        item.addEventListener('click', function (e) {
-            e.currentTarget.parentNode.classList.remove(openedClass);
-        })
+    ['.Dropdown-options', '.Dropdown-bg'].forEach(item => {
+        document.querySelectorAll(item).forEach(function (item) {
+            item.addEventListener('click', function (e) {
+                e.currentTarget.parentNode.classList.remove(openedClass);
+            })
+        });
     });
 
     document.querySelectorAll('.Code-text').forEach((block) => {

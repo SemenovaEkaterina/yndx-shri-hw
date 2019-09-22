@@ -1,21 +1,8 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <link rel="stylesheet" href="/static/style.css">
-    <title>1.5: Просмотр деталей файла</title>
-</head>
-<body class="Body Typo Typo_style_default Typo_color_default Typo_size_default">
-<%- include('../../components/header.ejs') %>
+<%- include('../../components/pageStart.ejs', {title: "1.5: Просмотр деталей файла"}) %>
 <div class="Container">
     <%- include('../../components/repo.ejs', { tabs: [{title: 'details', isActive: true}, {title: 'history', isActive: false}] }) %>
 </div>
 <div class="Container Container_full Section Section_bottom Section_size_m">
     <%- include('./file.ejs') %>
 </div>
-<%- include('../../components/footer.ejs') %>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/highlight.min.js"></script>
-<script src="/static/script.js"></script>
-</body>
-</html>
+<%- include('../../components/pageEnd.ejs') %>

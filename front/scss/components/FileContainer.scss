@@ -17,6 +17,7 @@
     background: $gray-30;
 
     @include media("<=phone") {
+      display: block;
       padding-left: 16px;
     }
   }
@@ -24,6 +25,19 @@
   &-info {
     display: table-cell;
     vertical-align: middle;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    max-width: 0;
+    width: 100%;
+    padding-right: $global-spacing-s;
+
+    @include media("<=phone") {
+      display: block;
+      max-width: unset;
+      padding-bottom: 10px;
+    }
   }
 
   &-status {
@@ -53,15 +67,6 @@
     }
   }
 
-  &-name {
-    display: inline-block;
-    vertical-align: middle;
-
-    max-width: 90%;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-
   &-size {
     color: $gray-80;
   }
@@ -72,6 +77,11 @@
     text-align: right;
 
     white-space: nowrap;
+
+    @include media("<=phone") {
+      display: block;
+      text-align: left;
+    }
   }
 
   &-count {

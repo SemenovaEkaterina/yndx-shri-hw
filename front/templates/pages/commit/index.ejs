@@ -1,15 +1,14 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <link rel="stylesheet" href="/static/style.css">
-    <title>3.1: Страница коммита</title>
-</head>
-<body class="Body">
-<%- include('../../components/header.ejs') %>
-<div class="Commit-page Page">
-    <div class="Commit-page-header Commit">
+<%- include('../../components/pageStart.ejs', {title: "3.1: Страница коммита"}) %>
+<div class="Container">
+    <div class="Adaptive Adaptive_show_mobile Section Section_mobile_m">
+        <div class="BackMenu">
+            <a class="BackMenu-back Typo Typo_color_inactive Link" href="/files">Back</a>
+            <div class="BackMenu-button">
+                <a class="Button Link" href="/files">Show files at r4318347</a>
+            </div>
+        </div>
+    </div>
+    <div class="Commit Section Section_bottom Section_size_m Section_mobile_xl">
         <div class="Commit-name">
             DEVTOOLS-4599: Add option to add extra whitespace between projects
         </div>
@@ -17,12 +16,9 @@
             <span class="Link">s324e8</span> by <span class="Name">woodcutter</span>, 4 s ago
         </div>
     </div>
-    <div class="Commit-page-diff">
-        <%- include('./diff.ejs') %>
-    </div>
+
 </div>
-<%- include('../../components/footer.ejs') %>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/highlight.min.js"></script>
-<script src="/static/script.js"></script>
-</body>
-</html>
+<div class="Container Container_full Section Section_size_xxl Section_mobile_xl">
+    <%- include('./diff.ejs') %>
+</div>
+<%- include('../../components/pageEnd.ejs') %>

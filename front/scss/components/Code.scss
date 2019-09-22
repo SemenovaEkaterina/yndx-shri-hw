@@ -7,12 +7,14 @@
 
   width: 100%;
   overflow-x: auto;
+  background-color: $blue-30;
 
   &:not(#{&}_diff) {
     padding: 6px 0;
   }
 
   &-rows {
+    background-color: white;
     display: table;
     width: 100%;
   }
@@ -53,8 +55,6 @@
   }
 
   &-meta {
-    background-color: $blue-30;
-
     padding: $global-spacing-xxs $global-spacing-s;
   }
 }

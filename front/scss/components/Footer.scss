@@ -1,21 +1,31 @@
 @import "../common/index";
 
 .Footer {
-  display: table;
-
-  //position: absolute;
-  //bottom: 0;
-
-  @include media("<=phone") {
+  @include media("<=tablet") {
     display: none;
+  }
+
+  &-stub {
+    height: $footer-height;;
+  }
+
+  &-content {
+    display: table;
+
+    position: absolute;
+    bottom: 0;
+    height: $footer-height;
+
+    border-top: $global-border-width-s solid $gray-10;
   }
 
   &-item {
     display: table-cell;
+    vertical-align: middle;
 
     font-size: $global-font-size-xs;
     line-height: $global-line-height-s;
-    padding: 18px $global-spacing-l 14px;
+    padding: 2px $global-spacing-l 0;
 
     white-space: nowrap;
 

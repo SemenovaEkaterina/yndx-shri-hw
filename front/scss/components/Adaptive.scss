@@ -1,0 +1,17 @@
+@import '../common/index';
+
+.Adaptive {
+  &_show {
+    &_desktop {
+      @include media("<=phone") {
+        display: none;
+      }
+    }
+
+    &_mobile {
+      @include media(">phone") {
+        display: none;
+      }
+    }
+  }
+}

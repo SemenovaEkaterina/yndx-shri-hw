@@ -14,6 +14,9 @@
     &_xl {
       padding-top: 24px;
     }
+    &_xxl {
+      padding-top: $global-font-size-xl;
+    }
   }
 
   @include media("<=phone") {
@@ -22,7 +25,13 @@
         padding: 0;
       }
       &_m {
-        padding: 10px 0;
+        padding-top: 8px;
+      }
+      &_l {
+        padding-top: 10px;
+      }
+      &_xl {
+        padding-top: 12px;
       }
     }
   }
