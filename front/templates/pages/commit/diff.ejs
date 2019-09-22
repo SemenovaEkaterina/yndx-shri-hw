@@ -1,3 +1,4 @@
+<% var rootPath = '../../'; %>
 <div class="FileContainer">
     <div class="FileContainer-header Typo Typo_size_default">
         <div class="FileContainer-info">
@@ -33,7 +34,7 @@
                 {number: '', prevNumber: 10, text: 'import java.util.Collection;', type: 'deleted'},
                 {number: '', prevNumber: 11, text: 'import java.util.List;', type: 'deleted'},
             ].forEach(function(line, i){ %>
-                <%- include('../../components/code-line.ejs', { diff: true, number: line.number, prevNumber: line.prevNumber, text: line.text, type: line.type, language: "java" }) %>
+                <%- include(rootPath + 'components/code-line.ejs', { diff: true, number: line.number, prevNumber: line.prevNumber, text: line.text, type: line.type, language: "java" }) %>
             <% }); %>
         </div>
         <%- include('./meta.ejs') -%>

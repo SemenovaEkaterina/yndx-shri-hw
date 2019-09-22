@@ -1,6 +1,7 @@
-<%- include('../../components/pageStart.ejs', {title: "1.6: Просмотр истории изменений файла"}) %>
+<% var rootPath = '../../'; %>
+<%- include(rootPath + 'components/pageStart.ejs', {title: "1.6: Просмотр истории изменений файла"}) %>
 <div class="Container">
-    <%- include('../../components/repo.ejs', { tabs: [{title: 'details', isActive: false}, {title: 'history', isActive: true}] }) %>
+    <%- include(rootPath + 'components/repo.ejs', { tabs: [{title: 'details', isActive: false}, {title: 'history', isActive: true}] }) %>
     <%- include('./list.ejs') %>
 </div>
-<%- include('../../components/pageEnd.ejs') %>
+<%- include(rootPath + 'components/pageEnd.ejs') %>

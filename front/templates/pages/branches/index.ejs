@@ -1,8 +1,9 @@
-<%- include('../../components/pageStart.ejs', {title: "2.1: Список веток"}) %>
+<% var rootPath = '../../'; %>
+<%- include(rootPath + 'components/pageStart.ejs', {title: "2.1: Список веток"}) %>
 <div class="Container">
-    <%- include('../../components/repo.ejs', { tabs: [{title: 'files', isActive: false}, {title: 'branches', isActive: true}] }) %>
+    <%- include(rootPath + 'components/repo.ejs', { tabs: [{title: 'files', isActive: false}, {title: 'branches', isActive: true}] }) %>
     <div class="Section Section_bottom Section_size_s Section_mobile_s">
         <%- include('./list.ejs') %>
     </div>
 </div>
-<%- include('../../components/pageEnd.ejs') %>
+<%- include(rootPath + 'components/pageEnd.ejs') %>

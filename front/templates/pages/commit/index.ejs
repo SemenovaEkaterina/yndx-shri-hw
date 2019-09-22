@@ -1,4 +1,5 @@
-<%- include('../../components/pageStart.ejs', {title: "3.1: Страница коммита"}) %>
+<% var rootPath = '../../'; %>
+<%- include(rootPath + 'components/pageStart.ejs', {title: "3.1: Страница коммита"}) %>
 <div class="Container">
     <div class="Adaptive Adaptive_show_mobile Section Section_mobile_m">
         <div class="BackMenu">
@@ -21,4 +22,4 @@
 <div class="Container Container_full Section Section_size_xxl Section_mobile_xl">
     <%- include('./diff.ejs') %>
 </div>
-<%- include('../../components/pageEnd.ejs') %>
+<%- include(rootPath + 'components/pageEnd.ejs') %>

@@ -1,3 +1,4 @@
+<% var rootPath = '../../'; %>
 <div class="Table">
     <div class="Table-row Table-row_type_header">
         <div class="Table-col">Name</div>
@@ -5,7 +6,7 @@
     </div>
     <div class="Table-row Table-row_type_content">
         <div class="Table-col">
-            <%- include('../../components/branch.ejs', { name: 'thunk' }) %>
+            <%- include(rootPath + 'components/branch.ejs', { name: 'thunk' }) %>
         </div>
         <div class="Table-col Table-link Adaptive Adaptive_show_mobile"></div>
         <div class="Table-col">
@@ -14,7 +15,7 @@
     </div>
     <div class="Table-row Table-row_type_content">
         <div class="Table-col">
-            <%- include('../../components/branch.ejs', { name: 'users/a-aidyn00/my-feature-2' }) %>
+            <%- include(rootPath + 'components/branch.ejs', { name: 'users/a-aidyn00/my-feature-2' }) %>
         </div>
         <div class="Table-col Table-link Adaptive Adaptive_show_mobile"></div>
         <div class="Table-col">

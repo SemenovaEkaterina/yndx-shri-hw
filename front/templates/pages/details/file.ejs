@@ -1,3 +1,4 @@
+<% var rootPath = '../../'; %>
 <div class="FileContainer">
     <div class="FileContainer-header Typo Typo_size_default">
         <div class="FileContainer-info">
@@ -28,7 +29,7 @@
             '   return path'
 
         ].forEach(function(line, i){ %>
-            <%- include('../../components/code-line.ejs', { diff: false, number: i + 1, text: line, type: "old", language: "python" }) %>
+            <%- include(rootPath + 'components/code-line.ejs', { diff: false, number: i + 1, text: line, type: "old", language: "python" }) %>
         <% }); %>
     </div>
 </div>

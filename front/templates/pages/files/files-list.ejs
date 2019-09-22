@@ -1,3 +1,4 @@
+<% var rootPath = '../../'; %>
 <div class="Section Section_size_m Section_mobile_s">
     <div class="Table">
         <div class="Table-row Table-row_type_header">
@@ -11,7 +12,7 @@
             <div class="Table-row Table-row_type_content">
                 <div class="Table-col Typo Typo_size_default">
                     <a href="/files">
-                        <%- include('../../components/directory.ejs', { name: "api" }) %>
+                        <%- include(rootPath + 'components/directory.ejs', { name: "api" }) %>
                     </a>
                 </div>
                 <div class="Table-col Adaptive Adaptive_show_desktop"><a class="Link Typo Typo_color_accent" href="/commit">d53dsv</a></div>
@@ -30,7 +31,7 @@
         <div class="Table-row Table-row_type_content">
             <div class="Table-col Typo Typo_size_default">
                 <a href="/details">
-                    <%- include('../../components/file.ejs', { name: "ya.make" }) %>
+                    <%- include(rootPath + 'components/file.ejs', { name: "ya.make" }) %>
                 </a>
             </div>
             <div class="Table-col Adaptive Adaptive_show_desktop"><a class="Link Typo Typo_color_accent" href="/commit">d53dsv</a></div>

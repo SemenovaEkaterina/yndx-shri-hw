@@ -1,8 +1,9 @@
-<%- include('../../components/pageStart.ejs', {title: "1.5: Просмотр деталей файла"}) %>
+<% var rootPath = '../../'; %>
+<%- include(rootPath + 'components/pageStart.ejs', {title: "1.5: Просмотр деталей файла"}) %>
 <div class="Container">
-    <%- include('../../components/repo.ejs', { tabs: [{title: 'details', isActive: true}, {title: 'history', isActive: false}] }) %>
+    <%- include(rootPath + 'components/repo.ejs', { tabs: [{title: 'details', isActive: true}, {title: 'history', isActive: false}] }) %>
 </div>
 <div class="Container Container_full Section Section_bottom Section_size_m">
     <%- include('./file.ejs') %>
 </div>
-<%- include('../../components/pageEnd.ejs') %>
+<%- include(rootPath + 'components/pageEnd.ejs') %>
