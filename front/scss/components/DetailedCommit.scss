@@ -40,11 +40,11 @@
   }
 
   &-message {
-    padding-bottom: 2px;
+    padding-bottom: $global-spacing-xxxs;
     font-weight: 500;
 
     @include media("<=phone") {
-      padding-right: $global-spacing-xl;
+      padding-right: $global-spacing-xxl;
 
       line-height: $global-line-height-s;
     }

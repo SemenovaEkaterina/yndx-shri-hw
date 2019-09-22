@@ -28,7 +28,7 @@
     position: relative;
 
     &:first-child {
-      padding-right: $global-spacing-xxl;
+      padding-right: $global-spacing-xxxl;
     }
 
     &_type {
@@ -52,7 +52,7 @@
         line-height: $global-line-height-s;
 
         @include media("<=phone") {
-          padding-top: 24px;
+          padding-top: $global-spacing-xl;
         }
       }
     }

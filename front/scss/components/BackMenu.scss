@@ -13,7 +13,7 @@
     position: relative;
     display: table-cell;
     vertical-align: middle;
-    padding-left: $local-icon-width + 6px;
+    padding-left: $local-icon-width + $global-spacing-xs-h;
 
     &:before {
       content: "";

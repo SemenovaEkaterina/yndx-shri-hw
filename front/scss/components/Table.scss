@@ -64,7 +64,7 @@
     padding-bottom: $global-spacing-s;
 
     @include media("<=tablet") {
-      padding: 0 0 10px;
+      padding: 0 0 $global-spacing-s-h;
       &:last-child {
         padding-bottom: 0;
       }

@@ -383,7 +383,7 @@
 }
 @media (max-width: 700px) {
   .Dropdown-options_wide {
-    padding: 36px 0 12px;
+    padding: 40px 0 12px;
   }
 }
 @media (max-width: 700px) {
@@ -470,7 +470,7 @@
   display: table;
   width: 100%;
   box-sizing: border-box;
-  padding: 11px 12px;
+  padding: 12px;
   background: #F5F5F5;
 }
 @media (max-width: 360px) {
@@ -509,7 +509,7 @@
   height: 16px;
   background: url("/static/imgs/file.svg") 50% 50% no-repeat;
   background-size: contain;
-  margin-bottom: 3px;
+  margin-bottom: 4px;
   margin-right: 8px;
 }
 .FileContainer-icon:first-child {
@@ -548,6 +548,36 @@
 }
 .FileContainer-count_type_negative:before {
   content: "-";
+}
+.FileContainer-link {
+  display: inline-block;
+  vertical-align: middle;
+  padding-left: 24px;
+  width: 14px;
+  height: 14px;
+  cursor: pointer;
+}
+.FileContainer-link_type_expand {
+  background: url("/static/imgs/expand.svg") 50% 50% no-repeat/contain;
+}
+@media (max-width: 360px) {
+  .FileContainer-link_type_expand {
+    float: right;
+  }
+}
+.FileContainer-link_type_save {
+  width: 36px;
+  height: 28px;
+  padding-left: 0;
+  background: url("/static/imgs/save.svg") 50% 50% no-repeat;
+  background-size: 14px 14px;
+  border: 1px solid #CCCCCC;
+  border-radius: 3px;
+}
+@media (max-width: 360px) {
+  .FileContainer-link_type_save {
+    display: none;
+  }
 }
 
 @font-face {

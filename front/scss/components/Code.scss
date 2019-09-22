@@ -10,7 +10,7 @@
   background-color: $blue-30;
 
   &:not(#{&}_diff) {
-    padding: 6px 0;
+    padding: $global-spacing-xs-h 0;
   }
 
   &-rows {
@@ -37,7 +37,7 @@
 
   &-number {
     display: table-cell;
-    padding: 0 $global-spacing-xl 0 24px;
+    padding: 0 $global-spacing-xxl 0 $global-spacing-xl;
 
     width: 1px;
 

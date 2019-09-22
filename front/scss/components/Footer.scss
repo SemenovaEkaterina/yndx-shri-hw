@@ -25,7 +25,7 @@
 
     font-size: $global-font-size-xs;
     line-height: $global-line-height-s;
-    padding: 2px $global-spacing-l 0;
+    padding: $global-spacing-xxxs $global-spacing-l 0;
 
     white-space: nowrap;
 
@@ -35,7 +35,7 @@
       }
 
       &_version {
-        padding-right: $global-spacing-xl;
+        padding-right: $global-spacing-xxl;
       }
 
       &_year {

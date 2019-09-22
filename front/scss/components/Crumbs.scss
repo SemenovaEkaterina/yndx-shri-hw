@@ -4,7 +4,7 @@ $local-spacing: $global-spacing-s;
 
 .Crumbs {
   padding-top: $global-spacing-xs;
-  padding-bottom: 10px;
+  padding-bottom: $global-spacing-s-h;
 
   @include media("<=phone") {
     padding-bottom: $global-spacing-xs;

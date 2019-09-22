@@ -25,7 +25,7 @@
 
   padding-top: $global-spacing-xs;
   padding-bottom: $global-spacing-xs;
-  padding-left: $local-padding-horizontal + $local-icon-size + 6px;
+  padding-left: $local-padding-horizontal + $local-icon-size + $global-spacing-xs-h;
   padding-right: $local-padding-horizontal;
 
   background-color: $gray-41;

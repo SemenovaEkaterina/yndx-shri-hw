@@ -16,7 +16,7 @@
   &-item {
     display: inline-block;
     position: relative;
-    margin-right: $global-spacing-xl;
+    margin-right: $global-spacing-xxl;
     padding-bottom: $global-spacing-s;
 
     font-size: $global-font-size-m;
@@ -29,7 +29,7 @@
     }
 
     @include media("<=phone") {
-      padding-bottom: 10px;
+      padding-bottom: $global-spacing-s-h;
     }
 
     &_active {
