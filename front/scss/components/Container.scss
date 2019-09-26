@@ -1,0 +1,10 @@
+.Container {
+  @include container;
+
+  @include media("<=phone") {
+
+    &_full {
+      padding: 0;
+    }
+  }
+}

@@ -1,0 +1,46 @@
+@import "../common/index";
+
+.Footer {
+  @include media("<=tablet") {
+    display: none;
+  }
+
+  &-stub {
+    height: $footer-height;;
+  }
+
+  &-content {
+    display: table;
+
+    position: absolute;
+    bottom: 0;
+    height: $footer-height;
+
+    border-top: $global-border-width-s solid $gray-10;
+  }
+
+  &-item {
+    display: table-cell;
+    vertical-align: middle;
+
+    font-size: $global-font-size-xs;
+    line-height: $global-line-height-s;
+    padding: $global-spacing-xxxs $global-spacing-l 0;
+
+    white-space: nowrap;
+
+    &_type {
+      &_info {
+        width: 100%;
+      }
+
+      &_version {
+        padding-right: $global-spacing-xxl;
+      }
+
+      &_year {
+        padding-left: 0;
+      }
+    }
+  }
+}

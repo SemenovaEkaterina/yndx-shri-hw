@@ -1,0 +1,27 @@
+@import '../common/index';
+
+$base-color: $black-70;
+$comment-color: $gray-100;
+$string-color: $blue-100;
+$title-color: $blue-100;
+
+.hljs {
+  color: $base-color;
+
+  &-comment {
+    color: $comment-color;
+  }
+
+  &-keyword {
+    font-weight: 600;
+  }
+
+  &-string {
+    color: $string-color;
+  }
+
+  &-title {
+    color: $title-color;
+    font-weight: 600;
+  }
+}

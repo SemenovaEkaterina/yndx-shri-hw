@@ -1,0 +1,33 @@
+@import '../common/index';
+
+.Button {
+  $local-icon-size: 12px;
+  $local-padding-horizontal: $global-spacing-s;
+
+  &:before {
+
+    content: "";
+
+    position: absolute;
+    top: 50%;
+    left: $local-padding-horizontal;
+    transform: translate(0, -50%);
+
+    width: 12px;
+    height: 12px;
+
+    background: url("/static/imgs/burger.svg") 50% 50% no-repeat;
+    background-size: contain;
+  }
+
+  position: relative;
+  display: inline-block;
+
+  padding-top: $global-spacing-xs;
+  padding-bottom: $global-spacing-xs;
+  padding-left: $local-padding-horizontal + $local-icon-size + $global-spacing-xs-h;
+  padding-right: $local-padding-horizontal;
+
+  background-color: $gray-41;
+  border-radius: $global-border-radius-s;
+}

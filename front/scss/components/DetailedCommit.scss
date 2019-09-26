@@ -1,0 +1,77 @@
+@import '../common/index';
+
+.DetailedCommit {
+  display: table;
+  width: 100%;
+
+  &-col {
+    display: table-cell;
+    vertical-align: top;
+
+    &_type {
+      &_text {
+        width: auto;
+        padding-right: $global-spacing-m;
+
+        @include media("<=phone") {
+          display: block;
+        }
+      }
+      &_commit {
+        width: 5%;
+        text-align: right;
+        white-space: nowrap;
+
+        @include media("<=tablet") {
+          display: none;
+        }
+      }
+      &_tag {
+        width: 18%;
+        text-align: right;
+
+        @include media("<=phone") {
+          position: absolute;
+          top: 0;
+          right: 0;
+        }
+      }
+    }
+  }
+
+  &-message {
+    padding-bottom: $global-spacing-xxxs;
+    font-weight: 500;
+
+    @include media("<=phone") {
+      padding-right: $global-spacing-xxl;
+
+      line-height: $global-line-height-s;
+    }
+  }
+
+  &-description {
+    display: inline-block;
+    padding-bottom: $global-spacing-xxs;
+
+    @include media("<=phone") {
+      font-size: $global-font-size-xs;
+      line-height: $global-line-height-s;
+    }
+  }
+
+  &-info {
+    color: $black-30;
+  }
+
+  &-tag {
+    $size: 16px;
+
+    display: inline-block;
+
+    width: $size;
+    height: $size;
+    background: url("/static/imgs/tag.svg") 50% 50% no-repeat;
+    background-size: contain;
+  }
+}

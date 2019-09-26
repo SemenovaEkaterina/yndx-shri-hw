@@ -1,0 +1,25 @@
+<% var rootPath = '../../'; %>
+<%- include(rootPath + 'components/pageStart.ejs', {title: "3.1: Страница коммита"}) %>
+<div class="Container">
+    <div class="Adaptive Adaptive_show_mobile Section Section_mobile_m">
+        <div class="BackMenu">
+            <a class="BackMenu-back Typo Typo_color_inactive Link" href="/files">Back</a>
+            <div class="BackMenu-button">
+                <a class="Button Link" href="/files">Show files at r4318347</a>
+            </div>
+        </div>
+    </div>
+    <div class="Commit Section Section_bottom Section_size_m Section_mobile_xl">
+        <div class="Commit-name">
+            DEVTOOLS-4599: Add option to add extra whitespace between projects
+        </div>
+        <div class="Commit-description">
+            <span class="Link">s324e8</span> by <span class="Name">woodcutter</span>, 4 s ago
+        </div>
+    </div>
+
+</div>
+<div class="Container Container_full Section Section_size_xxl Section_mobile_xl">
+    <%- include('./diff.ejs') %>
+</div>
+<%- include(rootPath + 'components/pageEnd.ejs') %>

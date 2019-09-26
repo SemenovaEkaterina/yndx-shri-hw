@@ -1,0 +1,39 @@
+@import '../common/index';
+
+.BackMenu {
+  display: table;
+  width: 100%;
+
+  font-size: $global-font-size-xs;
+  line-height: $global-line-height-xs;
+
+  &-back {
+    $local-icon-width: 9px;
+
+    position: relative;
+    display: table-cell;
+    vertical-align: middle;
+    padding-left: $local-icon-width + $global-spacing-xs-h;
+
+    &:before {
+      content: "";
+
+      position: absolute;
+      display: inline-block;
+      width: $local-icon-width;
+      height: 12px;
+
+      top: 50%;
+      left: 0;
+      transform: translate(0, -50%) scale(-1, 1);
+
+      background: url('/static/imgs/hor-arrow.svg') 50% 50% no-repeat;
+      background-size: contain;
+    }
+  }
+
+  &-button {
+    display: table-cell;
+    text-align: right;
+  }
+}

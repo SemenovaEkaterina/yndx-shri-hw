@@ -1,0 +1,9 @@
+<div class="Tabs">
+    <% tabs.forEach(function(tab){ %>
+        <a
+                class="Tabs-item Typo <% if (tab.isActive) { %>Tabs-item_active Typo_color_default <% } else {%>Typo_color_inactive<% } %>"
+                href="/<%= tab.title %>">
+            <%= tab.title %>
+        </a>
+    <% }); %>
+</div>

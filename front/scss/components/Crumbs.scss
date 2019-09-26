@@ -1,0 +1,37 @@
+@import "../common/index";
+
+$local-spacing: $global-spacing-s;
+
+.Crumbs {
+  padding-top: $global-spacing-xs;
+  padding-bottom: $global-spacing-s-h;
+
+  @include media("<=phone") {
+    padding-bottom: $global-spacing-xs;
+  }
+
+  border-bottom: $global-border-width-s solid $gray-40;
+
+  &-item {
+    display: inline-block;
+
+    margin-right: $local-spacing;
+
+    &:after {
+      content: "/";
+      margin-left: $local-spacing;
+    }
+
+    &:not(:last-child) {
+      color: $gray-90;
+    }
+
+    &:last-child {
+      &:after {
+        padding-right: 0;
+
+        content: none;
+      }
+    }
+  }
+}
