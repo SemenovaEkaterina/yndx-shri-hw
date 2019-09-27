@@ -1,0 +1,24 @@
+@import "../common/index";
+
+$local-input-height: 32px;
+
+.Input {
+  display: inline-block;
+  width: 100%;
+  height: $local-input-height;
+
+  color: $black-100;
+  font-size: $global-font-size-s;
+  line-height: $local-input-height;
+
+  border: $global-border-width-m solid $gray-40;
+  border-radius: $global-border-radius-xs-ct;
+
+  padding: 0 $global-spacing-s;
+  box-sizing: border-box;
+  outline: none;
+
+  &:focus {
+    border-color: $yellow;
+  }
+}

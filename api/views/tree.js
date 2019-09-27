@@ -38,7 +38,7 @@ module.exports = repoNotFoundHandler(asyncErrorHandler(async (req, res) => {
     }
 
     return res.json({
-        dir: [...new Set(
+        list: [...new Set(
             dir.map(item => removePrefix(item, relativePath).split('/')[0])
         )]
     });

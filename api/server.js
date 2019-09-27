@@ -1,5 +1,6 @@
 const express = require('express');
 const os = require('os');
+const cors = require('cors')
 const path = require('path');
 const config = require('./config');
 const {checkExisting} = require('./utils');
@@ -23,6 +24,7 @@ global.rootDirPath = rootDirPath;
 
 const initServer = () => {
     const app = express();
+    app.use(cors());
     app.use(express.urlencoded({extended: true}));
     app.use(baseUrl, require('./routes'));
 

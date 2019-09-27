@@ -43,4 +43,13 @@
       }
     }
   }
+
+  &-search {
+    $local-width: 280px;
+
+    width: $local-width;
+    position: absolute;
+    bottom: $global-spacing-xs;
+    right: 0;
+  }
 }

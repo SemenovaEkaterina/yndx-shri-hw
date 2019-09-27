@@ -1,5 +1,4 @@
 const express = require('express');
-const os = require('os');
 const path = require('path');
 const config = require('./config');
 

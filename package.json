@@ -8,20 +8,27 @@
     "api-server": "node api/server.js",
     "sass-watch": "sass --watch front/scss/index.scss:./front/static/style.css",
     "front-dev": "nodemon front/server.js",
-    "front-prod": "node front/server.js"
+    "front-prod": "node front/server.js",
+    "webpack-watch": "webpack --config front/webpack.config.js --watch"
   },
   "main": "api/server.js",
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "nodemon": "^1.19.2"
+    "nodemon": "^1.19.2",
+    "webpack-cli": "^3.3.9"
   },
   "dependencies": {
+    "cors": "^2.8.5",
     "ejs": "^2.7.1",
     "express": "^4.17.1",
     "include-media": "^1.4.9",
     "node-sass": "^4.12.0",
-    "sass": "^1.22.12"
+    "sass": "^1.22.12",
+    "webpack": "^4.41.0",
+    "yndx-shri-hw-redux": "file:../yndx-shri-hw-redux"
   },
-  "engines" : { "node" : "12" }
+  "engines": {
+    "node": "12"
+  }
 }
