@@ -1,8 +1,14 @@
 @import "../common/index";
 
+$local-padding-top: 50px;
+
 .Tabs {
   width: 100%;
   position: relative;
+
+  @include media("<=tablet") {
+    padding-top: $local-padding-top;
+  }
 
   &:before {
     content: "";
@@ -45,11 +51,14 @@
   }
 
   &-search {
-    $local-width: 280px;
-
-    width: $local-width;
     position: absolute;
     bottom: $global-spacing-xs;
     right: 0;
+
+    @include media("<=tablet") {
+      top: 0;
+      left: 0;
+      width: 100%;
+    }
   }
 }

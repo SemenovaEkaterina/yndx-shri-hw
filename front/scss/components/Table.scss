@@ -80,4 +80,10 @@
     background: url("/static/imgs/hor-arrow.svg") calc(100% - #{$global-spacing-xxs}) 50% no-repeat;
     background-size: 9px 21px;
   }
+
+  &-empty {
+    font-size: $global-font-size-m;
+    padding: $global-spacing-l;
+    text-align: center;
+  }
 }

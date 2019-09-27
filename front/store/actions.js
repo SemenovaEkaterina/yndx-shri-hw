@@ -1,7 +1,8 @@
 const GET_LIST = 'GET_LIST';
 const SET_LIST = 'SET_LIST';
 
-const getList = (search) => ({
+const getList = (repo, search) => ({
+    repo,
     search,
     type: GET_LIST,
 });

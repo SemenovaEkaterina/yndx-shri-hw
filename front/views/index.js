@@ -6,5 +6,5 @@ import Search from "./search";
 const files = document.getElementById('files');
 const search = document.getElementById('search');
 
-new Files(files, store, {getList});
-new Search(search, store, {getList});
+new Files(files, store, ['list', 'status'], {getList});
+new Search(search, store, ['search'], {getList});

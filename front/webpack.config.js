@@ -9,6 +9,7 @@ module.exports = {
     },
     resolve: {
         alias: {
+            'front': __dirname,
             'shared': path.join(__dirname, './shared'),
         }
     },

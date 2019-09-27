@@ -22,6 +22,11 @@ app.get('/:page/', (req, res) => {
     return handle(res, page);
 });
 
+app.get('/files/:repoId', (req, res) => {
+    const { repoId: repo } = req.params;
+    return res.render(`pages/files`, {repo});
+});
+
 app.listen(config.port);
 
 console.log(`Server listen on localhost:${config.port}`);

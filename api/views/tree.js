@@ -20,26 +20,25 @@ module.exports = repoNotFoundHandler(asyncErrorHandler(async (req, res) => {
         return res.sendStatus(status.notFound);
     }
 
-    const hasPath = !!relativePath;
-
     const repoPath = path.join(rootDirPath, getDirectoryName(repo));
     const hash = await getHash(repoPath, commit || 'master');
     if (!hash) {
         return res.sendStatus(status.notFound);
     }
 
-    const commandParams = ['ls-tree', '--name-only', '-r', hash];
-    if (hasPath) {
-        commandParams.push(relativePath);
-    }
-    const dir = await callGit(execFile, commandParams, repoPath);
-    if (relativePath && !dir.length) {
+    const scriptsPath = path.join(__dirname, '../scripts/files.sh');
+    const { stdout } = await execFile(scriptsPath, [], {cwd: repoPath});
+    const list = stdout.split('\n').filter(item => item).map(item => {
+        const [name, time, commit, message, author] = item.split('|');
+        return {
+            name, time, commit, message, author
+        }
+    });
+    if (relativePath && !list.length) {
         return res.sendStatus(status.notFound);
     }
 
     return res.json({
-        list: [...new Set(
-            dir.map(item => removePrefix(item, relativePath).split('/')[0])
-        )]
+        list,
     });
 }));

@@ -9,7 +9,6 @@ function reducer(state = defaultState, action = {}) {
     if (action.type === GET_LIST) {
         return Object.assign({}, {
                 status: ListStatus.LOADING,
-                list: state.list,
                 search: action.search,
             }
         )
@@ -18,7 +17,6 @@ function reducer(state = defaultState, action = {}) {
         return Object.assign({}, {
                 status: ListStatus.SUCCESS,
                 list: action.list,
-                search: state.search
             }
         )
     }

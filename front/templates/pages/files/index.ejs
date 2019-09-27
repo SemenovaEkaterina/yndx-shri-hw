@@ -3,7 +3,7 @@
 <div class="Container">
     <%- include(rootPath + 'components/repo.ejs', { tabs: [{title: 'files', isActive: true}, {title: 'branches', isActive: false}] }) %>
     <div class="Section Section_size_m Section_mobile_s">
-        <div class="Table" id="files">
+        <div class="Table" id="files" data-repo="<%= repo%>">
         </div>
     </div>
 </div>
