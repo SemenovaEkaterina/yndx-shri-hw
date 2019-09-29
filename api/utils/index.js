@@ -6,6 +6,7 @@ const removePrefix = require('./removePrefix');
 const callGit = require('./callGit');
 const rmDir = require('./rmDir');
 const cleanRelativePath = require('./cleanRelativePath');
+const create = require('./create');
 
 module.exports = {
     checkExisting,
@@ -16,4 +17,5 @@ module.exports = {
     callGit,
     rmDir,
     cleanRelativePath,
+    create,
 };

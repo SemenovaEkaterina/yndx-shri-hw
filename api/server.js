@@ -1,11 +1,12 @@
 const express = require('express');
 const os = require('os');
-const cors = require('cors')
+const cors = require('cors');
 const path = require('path');
 const config = require('./config');
-const {checkExisting} = require('./utils');
+const {checkExisting, create} = require('./utils');
+const {} = require('./views');
 
-const [, , inputPath] = process.argv;
+const [, , inputPath, init] = process.argv;
 
 if (!inputPath) {
     console.log(`Empty basedir`);
@@ -22,13 +23,21 @@ const rootDirPath = path.resolve(
 
 global.rootDirPath = rootDirPath;
 
-const initServer = () => {
+const initServer = async () => {
     const app = express();
     app.use(cors());
     app.use(express.urlencoded({extended: true}));
     app.use(baseUrl, require('./routes'));
 
     app.listen(config.port);
+    if (init) {
+        try {
+            await create(init);
+        } catch (e) {
+            console.log("Already init");
+        }
+
+    }
 
     console.log(`Server listen on localhost:${config.port}`);
 };

@@ -1,11 +1,11 @@
 import {View} from 'yndx-shri-hw-redux';
-import {ListStatus} from "../store/types";
+import {ListStatus} from "../store/files/types";
 
 export default class FilesView extends View {
     constructor(...args) {
         super(...args);
         const repo = this._el.getAttribute('data-repo');
-        this.actions.getList(repo, '');
+        this.actions.fetchList({repo, search: ''});
     }
 
     render(state) {

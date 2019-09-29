@@ -6,7 +6,7 @@ export default class SearchView extends View {
 
         const repo = this._el.getAttribute('data-repo');
         this._onInput = (e) => {
-          this.actions.getList(repo, e.target.value);
+          this.actions.fetchList({repo, search: e.target.value});
         };
         this._el.addEventListener('input', this._onInput);
     }

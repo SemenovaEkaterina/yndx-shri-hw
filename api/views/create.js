@@ -3,9 +3,8 @@ const config = require('../config');
 const {
     getHash,
     getDirectoryName,
-    callGit,
     checkExisting,
-    rmDir
+    create,
 } = require('../utils');
 const execFile = require("util").promisify(require("child_process").execFile);
 const {asyncErrorHandler} = require('../handlers');
@@ -26,7 +25,7 @@ module.exports = asyncErrorHandler(async (req, res) => {
     }
 
     try {
-        await callGit(execFile, ['clone', '--quiet', '--bare', url], rootDirPath);
+        create(url);
     }
     catch (e) {
         if (e.code === status.notFound) {
@@ -34,8 +33,6 @@ module.exports = asyncErrorHandler(async (req, res) => {
         }
         throw e;
     }
-
-    await rmDir(execFile, 'hooks', repoPath);
 
     return res.sendStatus(status.ok);
 });

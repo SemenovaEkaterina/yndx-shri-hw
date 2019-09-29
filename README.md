@@ -6,12 +6,36 @@
 
 Домашнее задание «Архитектура»
 
-Запуск:
-1. `npm install`
-1. Запустить сервер api: `npm run api-server`
-1. Добавить репозиторий:
-`POST - http://localhost:3003/api/repos/`
-1. Запустить сервер фронта: `npm run front-prod`
-1. По адресу `http://localhost:3001/files/<repoId>` можно посмотреть список файлов
+## Запуск
 
-*Порты можно изменить в конфиге `api/config.json`, `front/config.json`
+* Зависимости:
+
+`npm install`
+* Запустить сервер api: 
+
+Для проверки добален параметр init, с которым при запуске скачавается репозиторий.
+
+Например:
+
+`npm run api-prod <dir> https://github.com/SemenovaEkaterina/promise-polyfill`
+
+Либо добавить репозиторий:
+
+`POST - http://localhost:3003/api/repos/`
+
+Порт можно изменить в конфиге `api/config.json`
+
+* Запустить сервер фронта:
+
+`npm run front-prod`
+
+Порт можно изменить в конфиге `front/config.json`
+
+* По адресу `/files/<repoId>` доступен список файлов
+
+Для скаченного выше репозитория: `http://localhost:3001/files/promise-polyfill`
+
+## Реализация
+
+`front/store` - формирование стора
+`front/views` - view для таблицы файлов и поля поиска

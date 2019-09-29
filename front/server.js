@@ -10,11 +10,11 @@ app.use('/static', express.static(__dirname + '/static'));
 app.use('/scripts', express.static(__dirname + '/../../node_modules'));
 
 const handle = (res, page) => {
-    return res.render(`pages/${page}`, {});
+    return res.render(`pages/${page}`, {repo: ''});
 };
 
 app.get('/', (req, res) => {
-    return handle(res, 'files');
+    return handle(res, 'files', { repo: '' });
 });
 
 app.get('/:page/', (req, res) => {

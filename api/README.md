@@ -2,7 +2,7 @@
 
 ### Запуск:
 1. npm install
-1. npm run server <directory>
+1. npm run api-prod <directory>
  
 ### Структура:
 - src
