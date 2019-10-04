@@ -1,9 +1,14 @@
 <div class="Tabs">
     <% tabs.forEach(function(tab){ %>
         <a
-                class="Tabs-item Typo <% if (tab.isActive) { %>Tabs-item_active Typo_color_default <% } else {%>Typo_color_inactive<% } %>"
+                class="Tabs-item Typo <% if (tab.isActive) { %>Tabs-item_active Typo_color_default <% } else { %>Typo_color_inactive<% } %>"
                 href="/<%= tab.title %>">
             <%= tab.title %>
         </a>
     <% }); %>
+    <% if (repo) { %>
+        <div class="Tabs-search">
+            <input class="Input" placeholder="Поиск" id="search" data-repo="<%= repo%>"/>
+        </div>
+    <% } %>
 </div>

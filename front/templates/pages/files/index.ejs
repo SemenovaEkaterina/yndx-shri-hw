@@ -2,7 +2,10 @@
 <%- include(rootPath + 'components/pageStart.ejs', {title: "1.1, 1.2, 1.3, 1.4: Список файлов"}) %>
 <div class="Container">
     <%- include(rootPath + 'components/repo.ejs', { tabs: [{title: 'files', isActive: true}, {title: 'branches', isActive: false}] }) %>
-    <%- include('./files-list.ejs') %>
+    <div class="Section Section_size_m Section_mobile_s">
+        <div class="Table" id="files" data-repo="<%= repo%>">
+        </div>
+    </div>
 </div>
 <div class="Container Container_full">
     <%- include('./readme.ejs') %>

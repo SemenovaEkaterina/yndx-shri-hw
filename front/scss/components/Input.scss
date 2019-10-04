@@ -1,0 +1,38 @@
+@import "../common/index";
+
+$local-input-height: 32px;
+$local-input-width: 180px;
+$local-input-width-l: 250px;
+
+.Input {
+  display: inline-block;
+  width: $local-input-width;
+  max-width: 100%;
+  height: $local-input-height;
+
+  color: $black-100;
+  font-size: $global-font-size-s;
+  line-height: $local-input-height;
+
+  border: $global-border-width-m solid $gray-40;
+  border-radius: $global-border-radius-xs-ct;
+
+  padding: 0 $global-spacing-s;
+  box-sizing: border-box;
+  outline: none;
+
+  transition: all ease-in 200ms;
+
+  @include media("<=phone") {
+    width: 100%;
+  }
+
+  &:focus {
+    border-color: $yellow;
+    width: $local-input-width-l;
+
+    @include media("<=phone") {
+      width: 100%;
+    }
+  }
+}
