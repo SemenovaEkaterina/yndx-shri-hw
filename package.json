@@ -18,7 +18,7 @@
   },
   "dependencies": {
     "ejs": "^2.7.1",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "include-media": "^1.4.9",
     "node-sass": "^4.12.0",
     "sass": "^1.22.12"
